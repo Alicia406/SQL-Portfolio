@@ -1,0 +1,12 @@
+create table goods (id integer primary key, name text,price integer, quantity integer, aisle integer, rating integer);
+
+INSERT INTO goods VALUES (1, "pizza",5.99, 20, 26, 5);
+INSERT INTO goods VALUES (2, "Soda", 3.99,50, 23, 4);
+INSERT INTO goods VALUES (3, "Chips",3.50, 26, 21, 6);
+INSERT INTO goods VALUES (4, "Mustard", 2.49, 15, 21, 5);
+INSERT INTO goods VALUES (5, "Oil",8.99, 35, 21, 5);
+
+SELECT * from goods order by aisle;
+SELECT id,name, rating from goods order by id ;
+SELECT name, quantity from goods group by name;
+SELECT sum(price) from goods;
